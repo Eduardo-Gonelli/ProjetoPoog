@@ -11,4 +11,4 @@ Entre os conceitos que são abordados estão:
 - Coleções em C#;
 - Delegates e eventos.
 
-Tais conceitos serão aplicados a um jogo do gênero Plataforma 2D Sidescroller, com gráficos ultra simples, para uma aprendizagem mais lúdica e prática.
+Os conceitos aplicados a um jogo do gênero Plataforma 2D Sidescroller, com gráficos ultra simples, para uma aprendizagem mais lúdica e prática.
