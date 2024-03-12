@@ -264,7 +264,7 @@ GameObject:
   - component: {fileID: 956927549}
   - component: {fileID: 956927548}
   - component: {fileID: 956927547}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Square (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -394,6 +394,7 @@ GameObject:
   - component: {fileID: 1225404537}
   - component: {fileID: 1225404536}
   - component: {fileID: 1225404535}
+  - component: {fileID: 1225404538}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -475,6 +476,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1225404538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1225404534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b884c6f17890cf4783a8d4a74597805, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1411193729}
+  offsetX: 0
+  offsetY: 1
+  offsetSmoothingX: 5
+  offsetSmoothingY: 5
 --- !u!1 &1411193729
 GameObject:
   m_ObjectHideFlags: 0
@@ -488,7 +506,6 @@ GameObject:
   - component: {fileID: 1411193734}
   - component: {fileID: 1411193733}
   - component: {fileID: 1411193735}
-  - component: {fileID: 1411193736}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -637,20 +654,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 785cd31f141b26a45803dec14d6ced39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveType: 1
   speed: 5
---- !u!114 &1411193736
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1411193729}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4cadc065959d11d4aa72503102437519, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jumpForce: 600
+  dashType: 0
+  dashDuration: 1
+  jumpForce: 500
+  slideVelocity: -2
+  whatIsWall:
+    serializedVersion: 2
+    m_Bits: 0
+  wallCheck: {fileID: 1411193732}
+  wallCheckRadius: 0.2
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
