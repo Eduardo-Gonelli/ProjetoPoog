@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 // Enum serve como um seletor
-// onde sÛ pode ser escolhido um valor
+// onde s√≥ pode ser escolhido um valor
 // de cada vez
 public enum MoveType
 {
@@ -27,55 +27,57 @@ public enum DashType
 
 public class PlayerBase : MonoBehaviour
 {
-    // Vari·vel para controlar a vida do personagem
+    // Vari√°vel para controlar a vida do personagem
     const int MAX_HEALTH = 100;
     private int health;
-    
-    // Vari·vel para controlar o tipo de movimento
+
+    // Vari√°vel para controlar o tipo de movimento
     public MoveType moveType = MoveType.Translate;
     [SerializeField] float speed = 5.0f;
     Vector3 inputVector;
     Rigidbody2D rb2d;
 
-    // Vari·vel para controlar o tipo de dash
+    // Vari√°vel para controlar o tipo de dash
     public DashType dashType = DashType.ModoImpulso;
     DashState dashState = DashState.Ready;
     float dashCooldown = 3.0f;
     [SerializeField] float dashDuration = 1.0f;
 
 
-    // Vari·veis para controle do pulo
+    // Vari√°veis para controle do pulo
     public float jumpForce = 500f;
     private Rigidbody2D rb;
-    private bool isGrounded = true;      // Flag para indicar se o personagem est· no ch„o    
+    private bool isGrounded = true;      // Flag para indicar se o personagem est√° no ch√£o    
     private bool jumpRequested = false;  // Flag para indicar se o pulo foi solicitado    
     bool doubleJump = true;              // Flag para indicar se o personagem pode realizar um segundo pulo
 
 
-    // Vari·veis para controlar o wall slide
+    // Vari√°veis para controlar o wall slide
     public float slideVelocity = -2f;     // velocidade do slide
     public LayerMask whatIsWall;          // camada que representa a parede
-    public Transform wallCheck;           // ponto de verificaÁ„o da parede
-    public float wallCheckRadius = 0.2f;  // raio do ponto de verificaÁ„o
-    bool isTouchingWall;                  // flag para indicar se est· tocando a parede
-    bool isWallSliding = false;           // flag para indicar se est· deslizando na parede
+    public Transform wallCheck;           // ponto de verifica√ß√£o da parede
+    public float wallCheckRadius = 0.2f;  // raio do ponto de verifica√ß√£o
+    bool isTouchingWall;                  // flag para indicar se est√° tocando a parede
+    bool isWallSliding = false;           // flag para indicar se est√° deslizando na parede
+    float wallSliderJumpTimer = 0.2f;
+    bool canSlide = true;
 
     void Start()
     {
-        
-        health = MAX_HEALTH;                 // inicializa a vida do personagem com o valor m·ximo
+
+        health = MAX_HEALTH;                 // inicializa a vida do personagem com o valor m√°ximo
         rb2d = GetComponent<Rigidbody2D>();  // Inicializa o componente Rigidbody2D
     }
-    
+
     void Update()
     {
         // Recebe o input do jogador
-        float horizontalInput = Input.GetAxis("Horizontal");        
+        float horizontalInput = Input.GetAxis("Horizontal");
         // Cria um vetor com os valores do input
         inputVector = new Vector3(horizontalInput, 0, 0);
-        // Chama o mÈtodo de movimento de acordo com o tipo selecionado
-        // No Update chama os tipos n„o fÌsicos
-        switch(moveType)
+        // Chama o m√©todo de movimento de acordo com o tipo selecionado
+        // No Update chama os tipos n√£o f√≠sicos
+        switch (moveType)
         {
             case MoveType.Transform:
                 MoveByTransform();
@@ -83,12 +85,12 @@ public class PlayerBase : MonoBehaviour
             case MoveType.Translate:
                 MoveByTransformTranslate();
                 break;
-        }  
-        
-        // Chama o mÈtodo de Dash
+        }
+
+        // Chama o m√©todo de Dash
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
-            if(dashState == DashState.Ready)
+            if (dashState == DashState.Ready)
             {
                 dashState = DashState.Dashing;
                 StartDash();
@@ -107,50 +109,66 @@ public class PlayerBase : MonoBehaviour
         }
 
         // Jump
-        // Captura a solicitaÁ„o de pulo
+        // Captura a solicita√ß√£o de pulo
         if (Input.GetButtonDown("Jump"))
         {
-            // Verifica se o personagem est· no ch„o
+            // Verifica se o personagem est√° no ch√£o
             // Se sim, solicita o pulo
-            if (isGrounded)
+            if (isGrounded || isWallSliding)
             {
+                if (isWallSliding)
+                {
+                    canSlide = false;
+                }
                 jumpRequested = true;
             }
-            // Se n„o, verifica se o personagem pode realizar um segundo pulo
+            // Se n√£o, verifica se o personagem pode realizar um segundo pulo
             else if (doubleJump)
             {
-                // Ao realizar um segundo pulo, as forÁas do Rigidbody2D
-                // geralmente s„o somadas, o que pode resultar
+                // Ao realizar um segundo pulo, as for√ßas do Rigidbody2D
+                // geralmente s√£o somadas, o que pode resultar
                 // em um pulo muito alto. Para evitar isso,
-                // a velocidade do personagem È zerada antes
+                // a velocidade do personagem √© zerada antes
                 rb2d.velocity = Vector2.zero;
                 jumpRequested = true;
                 doubleJump = false;
             }
 
         }
-        WallSlide();
-
+        if(wallSliderJumpTimer > 0 && !canSlide)
+        {
+            wallSliderJumpTimer -= Time.deltaTime;
+            if(wallSliderJumpTimer <= 0)
+            {
+                canSlide = true;
+                wallSliderJumpTimer = 0.2f;
+            }
+        }
+        else if (canSlide)
+        {
+            WallSlide();
+        }      
     }
 
     private void FixedUpdate()
     {
-        // No FixedUpdate chama os tipos fÌsicos
+        // No FixedUpdate chama os tipos f√≠sicos
         if (moveType == MoveType.Rigidbody2D)
         {
             MoveByRigidbody2dForce();
         }
 
-        // Aplica a forÁa de pulo se um pulo foi solicitado e o personagem est· no ch„o
-        if (jumpRequested || isWallSliding)
+        // Aplica a for√ßa de pulo se um pulo foi solicitado e o personagem est√° no ch√£o
+        if (jumpRequested)
         {
+            rb2d.velocity = Vector2.zero;
             rb2d.AddForce(new Vector2(0, jumpForce));
-            isGrounded = false; // Ao pular o personagem n„o est· mais no ch„o
-            jumpRequested = false; // Reseta a solicitaÁ„o de pulo
+            isGrounded = false; // Ao pular o personagem n√£o est√° mais no ch√£o
+            jumpRequested = false; // Reseta a solicita√ß√£o de pulo
         }
     }
 
-    // MÈtodo para receber dano
+    // M√©todo para receber dano
     public void TakeDamage(int damage)
     {
         health -= damage;
@@ -160,10 +178,10 @@ public class PlayerBase : MonoBehaviour
         }
     }
 
-    // MÈtodo para verificar se o personagem est· no ch„o
+    // M√©todo para verificar se o personagem est√° no ch√£o
     void OnCollisionEnter2D(Collision2D collision)
     {
-        // Verifica se o personagem est· no ch„o
+        // Verifica se o personagem est√° no ch√£o
         if (collision.gameObject.CompareTag("Ground"))
         {
             // Se sim, permite pular novamente
@@ -174,21 +192,21 @@ public class PlayerBase : MonoBehaviour
 
 
     #region Metodos de Movimento
-    // MÈtodo para mover o personagem modificando a posiÁ„o diretamente
+    // M√©todo para mover o personagem modificando a posi√ß√£o diretamente
     void MoveByTransform()
-    {        
+    {
         Vector3 newPosition = transform.position + inputVector * speed * Time.deltaTime;
         transform.position = newPosition;
     }
 
-    // MÈtodo para mover o personagem usando o mÈtodo Translate
+    // M√©todo para mover o personagem usando o m√©todo Translate
     void MoveByTransformTranslate()
     {
         Vector3 movement = inputVector * speed * Time.deltaTime;
         transform.Translate(movement);
     }
 
-    // MÈtodo para mover o personagem usando a forÁa do Rigidbody2D
+    // M√©todo para mover o personagem usando a for√ßa do Rigidbody2D
     void MoveByRigidbody2dForce()
     {
         Vector3 forceVector = inputVector * speed;
@@ -197,7 +215,7 @@ public class PlayerBase : MonoBehaviour
     #endregion
 
 
-    #region MÈtodos de Dash
+    #region M√©todos de Dash
     public void StartDash()
     {
         // Verifica qual o tipo de dash selecionado
@@ -247,11 +265,11 @@ public class PlayerBase : MonoBehaviour
     }
     #endregion
 
-    #region MÈtodos de Wall Slide
+    #region M√©todos de Wall Slide
     public void WallSlide()
     {
         isTouchingWall = Physics2D.OverlapCircle(wallCheck.position, wallCheckRadius, whatIsWall);
-        if(isTouchingWall && !isGrounded)
+        if (isTouchingWall && !isGrounded)
         {
             isWallSliding = true;
             rb2d.velocity = new Vector2(rb2d.velocity.x, slideVelocity);
@@ -264,7 +282,7 @@ public class PlayerBase : MonoBehaviour
 
     private void OnDrawGizmosSelected()
     {
-        if(wallCheck != null)
+        if (wallCheck != null)
         {
             Gizmos.DrawWireSphere(wallCheck.position, wallCheckRadius);
         }
