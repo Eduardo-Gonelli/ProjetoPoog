@@ -2,17 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-enum ZoomType
-{
-    ZoomIn,
-    ZoomOut
-}
+//enum ZoomType
+//{
+//    ZoomIn,
+//    ZoomOut
+//}
 
 public class TriggerCameraZoom : MonoBehaviour
 {
     Camera mainCamera;
     CameraController cc;
-    [SerializeField] ZoomType zoomType;
+    //[SerializeField] ZoomType zoomType;
+    [SerializeField] [Range(5, 20)] float zoomAmount = 2.0f;
+    [SerializeField] [Range(1, 5)] float zoomDuration = 1.0f;
 
     private void Start()
     {
@@ -24,10 +26,8 @@ public class TriggerCameraZoom : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            if (zoomType == ZoomType.ZoomOut)
-                cc.ZoomOut();
-            else if (zoomType == ZoomType.ZoomIn)
-                cc.ZoomIn();            
+            if(cc.isZooming == false)
+                cc.ZoomStart(zoomAmount, zoomDuration);
         }
     }    
 }

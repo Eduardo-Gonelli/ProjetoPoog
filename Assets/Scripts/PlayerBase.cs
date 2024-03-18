@@ -32,19 +32,25 @@ public class PlayerBase : MonoBehaviour
     private int health;
 
     // Variável para controlar o tipo de movimento
+    [Header("Movimento")]
     public MoveType moveType = MoveType.Translate;
     [SerializeField] float speed = 5.0f;
     Vector3 inputVector;
     Rigidbody2D rb2d;
 
     // Variável para controlar o tipo de dash
+    [Header("Dash")]
     public DashType dashType = DashType.ModoImpulso;
     DashState dashState = DashState.Ready;
-    float dashCooldown = 3.0f;
-    [SerializeField] float dashDuration = 1.0f;
+    [SerializeField] float dashDuration = 0.5f;
+    [SerializeField] float dashForce = 10.0f;
+    [SerializeField] float dashCooldown = 1.0f;
+    float dashCooldownAux;
+
 
 
     // Variáveis para controle do pulo
+    [Header("Pulo")]
     public float jumpForce = 500f;
     private Rigidbody2D rb;
     private bool isGrounded = true;      // Flag para indicar se o personagem está no chão    
@@ -93,6 +99,7 @@ public class PlayerBase : MonoBehaviour
             if (dashState == DashState.Ready)
             {
                 dashState = DashState.Dashing;
+                dashCooldownAux = dashCooldown;
                 StartDash();
             }
         }
@@ -100,10 +107,10 @@ public class PlayerBase : MonoBehaviour
         // cooldown do dash
         if (dashState == DashState.Dashing)
         {
-            dashCooldown -= Time.deltaTime;
-            if (dashCooldown <= 0)
+            dashCooldownAux -= Time.deltaTime;
+            if (dashCooldownAux <= 0)
             {
-                dashCooldown = 3.0f;
+                dashCooldownAux = 3.0f;
                 dashState = DashState.Ready;
             }
         }
@@ -222,13 +229,13 @@ public class PlayerBase : MonoBehaviour
         switch (dashType)
         {
             case DashType.ModoImpulso:
-                StartCoroutine(Dash1(15, dashDuration, rb2d, inputVector));
+                StartCoroutine(Dash1(dashForce, dashDuration, rb2d, inputVector));
                 break;
             case DashType.ModoAlteracaoTemporariaVelocidade:
-                StartCoroutine(Dash2(2, dashDuration, inputVector));
+                StartCoroutine(Dash2(dashForce, dashDuration, inputVector));
                 break;
             case DashType.ModoMovimentoLinearInterpolado:
-                StartCoroutine(Dash3(2, dashDuration, inputVector));
+                StartCoroutine(Dash3(dashForce, dashDuration, inputVector));
                 break;
         }
     }

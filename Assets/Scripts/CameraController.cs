@@ -5,8 +5,6 @@
 /// </summary>
 
 using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class CameraController : MonoBehaviour
@@ -17,6 +15,7 @@ public class CameraController : MonoBehaviour
     public float offsetSmoothingX;  // Suavização no eixo X
     public float offsetSmoothingY;  // Suavização no eixo Y
     private Vector3 playerPosition; // Posição do jogador
+    public bool isZooming = false;  // Flag para indicar se a câmera está em processo de zoom
 
     void Update()
     {
@@ -40,14 +39,10 @@ public class CameraController : MonoBehaviour
         transform.position = newPosition;
     }
 
-    public void ZoomIn()
+    public void ZoomStart(float zoomAmount, float zoomDuration)
     {
-        StartCoroutine(Zoom(10, 1));
-    }
-
-    public void ZoomOut()
-    {
-        StartCoroutine(Zoom(5, 1));
+        isZooming = true;
+        StartCoroutine(Zoom(zoomAmount, zoomDuration));
     }
 
     IEnumerator Zoom(float size, float duration)
@@ -55,12 +50,18 @@ public class CameraController : MonoBehaviour
         float time = 0;
         float orinalSize = Camera.main.orthographicSize;
         float newSize = size;
+        if(size == orinalSize)
+        {
+            isZooming = false;
+            yield break;
+        }
         while (time < duration)
         {
             Camera.main.orthographicSize = Mathf.Lerp(orinalSize, newSize, time / duration);
             time += Time.deltaTime;
             yield return null;
         }
+        isZooming = false;
         Camera.main.orthographicSize = newSize;
     }
 }
