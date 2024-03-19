@@ -29,7 +29,7 @@ public class PlayerBase : MonoBehaviour
 {
     // Variável para controlar a vida do personagem
     const int MAX_HEALTH = 100;
-    private int health;
+    private float health;
 
     // Variável para controlar o tipo de movimento
     [Header("Movimento")]
@@ -51,6 +51,7 @@ public class PlayerBase : MonoBehaviour
 
     // Variáveis para controle do pulo
     [Header("Pulo")]
+    private bool canJump = true;
     public float jumpForce = 500f;
     private Rigidbody2D rb;
     private bool isGrounded = true;      // Flag para indicar se o personagem está no chão    
@@ -68,6 +69,7 @@ public class PlayerBase : MonoBehaviour
     float wallSliderJumpTimer = 0.2f;
     bool canSlide = true;
 
+    public bool podePuxarCaixa = false;
     void Start()
     {
 
@@ -154,7 +156,15 @@ public class PlayerBase : MonoBehaviour
         else if (canSlide)
         {
             WallSlide();
-        }      
+        }
+
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            podePuxarCaixa = !podePuxarCaixa;
+            if(podePuxarCaixa) canJump = false;
+            else canJump = true;
+        }        
+
     }
 
     private void FixedUpdate()
@@ -166,17 +176,21 @@ public class PlayerBase : MonoBehaviour
         }
 
         // Aplica a força de pulo se um pulo foi solicitado e o personagem está no chão
-        if (jumpRequested)
+        if (jumpRequested && canJump)
         {
             rb2d.velocity = Vector2.zero;
             rb2d.AddForce(new Vector2(0, jumpForce));
             isGrounded = false; // Ao pular o personagem não está mais no chão
             jumpRequested = false; // Reseta a solicitação de pulo
+        } 
+        else if (jumpRequested && !canJump)
+        {
+            jumpRequested = false;
         }
     }
 
     // Método para receber dano
-    public void TakeDamage(int damage)
+    public void TakeDamage(float damage)
     {
         health -= damage;
         if (health <= 0)
