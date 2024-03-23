@@ -821,6 +821,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &434447726
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 434447727}
+  m_Layer: 0
+  m_Name: PortaPosicaoFinal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &434447727
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 434447726}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 19.46, y: 3.519, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1930499715}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &457223593
 GameObject:
   m_ObjectHideFlags: 0
@@ -832,6 +863,7 @@ GameObject:
   - component: {fileID: 457223594}
   - component: {fileID: 457223596}
   - component: {fileID: 457223595}
+  - component: {fileID: 457223597}
   m_Layer: 0
   m_Name: Visao
   m_TagString: Untagged
@@ -944,7 +976,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 2
   m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.31764707}
+  m_Color: {r: 1, g: 0.889333, b: 0, a: 0.09803922}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -954,6 +986,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &457223597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 457223593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ebee3f144e5d3841b5e151d402c2875, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &478639054
 GameObject:
   m_ObjectHideFlags: 0
@@ -965,6 +1009,7 @@ GameObject:
   - component: {fileID: 478639057}
   - component: {fileID: 478639056}
   - component: {fileID: 478639055}
+  - component: {fileID: 478639058}
   m_Layer: 0
   m_Name: DamazeZone
   m_TagString: Untagged
@@ -1084,6 +1129,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &478639058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 478639054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32920b31c8d1a6f40becd08a1697b9dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10
+  damageRateTime: 1
 --- !u!1 &506453873
 GameObject:
   m_ObjectHideFlags: 0
@@ -1484,6 +1543,7 @@ GameObject:
   m_Component:
   - component: {fileID: 586468235}
   - component: {fileID: 586468236}
+  - component: {fileID: 586468237}
   m_Layer: 0
   m_Name: Key
   m_TagString: Untagged
@@ -1543,6 +1603,19 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.23836781
+--- !u!114 &586468237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 586468234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c6a63338f585f64d9f4b76643e02863, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 1
 --- !u!1 &618093149
 GameObject:
   m_ObjectHideFlags: 0
@@ -2925,7 +2998,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -2
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 0.2924528, g: 0.2924528, b: 0.2924528, a: 1}
   m_FlipX: 0
@@ -3785,7 +3858,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 0.5943396, g: 0.52377474, b: 0, a: 1}
   m_FlipX: 0
@@ -4057,6 +4130,7 @@ MonoBehaviour:
   wallCheck: {fileID: 1411193732}
   wallCheckRadius: 0.2
   podePuxarCaixa: 0
+  chaves: 
 --- !u!1 &1414203804
 GameObject:
   m_ObjectHideFlags: 0
@@ -5110,6 +5184,7 @@ GameObject:
   - component: {fileID: 1774922768}
   - component: {fileID: 1774922769}
   - component: {fileID: 1774922770}
+  - component: {fileID: 1774922771}
   m_Layer: 0
   m_Name: Porta
   m_TagString: Untagged
@@ -5126,7 +5201,7 @@ Transform:
   m_GameObject: {fileID: 1774922767}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.13, y: 3.519, z: 0}
+  m_LocalPosition: {x: 15.04, y: 3.519, z: 0}
   m_LocalScale: {x: 6.246368, y: 1.373609, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5229,6 +5304,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1774922771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1774922767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 826c14ad966ce56479d08523b846c420, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  posicaoFinal: {fileID: 434447727}
+  velocidade: 3
 --- !u!1 &1930499714
 GameObject:
   m_ObjectHideFlags: 0
@@ -5265,6 +5354,7 @@ Transform:
   - {fileID: 586468235}
   - {fileID: 1989359824}
   - {fileID: 1774922768}
+  - {fileID: 434447727}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1939629729
@@ -5755,8 +5845,9 @@ GameObject:
   - component: {fileID: 1989359824}
   - component: {fileID: 1989359826}
   - component: {fileID: 1989359825}
+  - component: {fileID: 1989359827}
   m_Layer: 0
-  m_Name: Capsule
+  m_Name: PainelPorta
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5855,7 +5946,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -2
+  m_SortingOrder: -3
   m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
   m_Color: {r: 0.6930852, g: 0, b: 1, a: 1}
   m_FlipX: 0
@@ -5867,6 +5958,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1989359827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1989359823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b8c34d5285c40a44b2f652f1c1d5857, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  porta: {fileID: 1774922771}
+  jogadorPerto: 0
+  possuiChave: 0
+  portaId: 1
+  chaveOn: {fileID: 1078520255}
 --- !u!1 &2057438369
 GameObject:
   m_ObjectHideFlags: 0

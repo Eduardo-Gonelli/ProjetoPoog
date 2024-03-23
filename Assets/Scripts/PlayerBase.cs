@@ -70,6 +70,8 @@ public class PlayerBase : MonoBehaviour
     bool canSlide = true;
 
     public bool podePuxarCaixa = false;
+
+    public List<int> chaves = new List<int>();
     void Start()
     {
 
@@ -193,9 +195,11 @@ public class PlayerBase : MonoBehaviour
     public void TakeDamage(float damage)
     {
         health -= damage;
+        Debug.Log("Vida: " + health);
         if (health <= 0)
         {
             // Die();
+            Debug.Log("Morreu");
         }
     }
 
@@ -209,6 +213,17 @@ public class PlayerBase : MonoBehaviour
             isGrounded = true;
             doubleJump = true;
         }
+    }
+
+    public void AdicionarChaves(int chave)
+    {
+        chaves.Add(chave);
+    }
+
+    public void RemoverChave(int chaveId)
+    {
+        chaves.Remove(chaveId);
+        Debug.Log("Chave removida");
     }
 
 
