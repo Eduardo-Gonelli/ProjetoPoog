@@ -20,6 +20,7 @@ public class BoxPushing : MonoBehaviour
             PlayerBase player = collision.gameObject.GetComponent<PlayerBase>();
             this.player = player;
             playerObject = collision.gameObject;
+            Debug.Log("Pressione 'G' para puxar a caixa");
         }
     }
 
@@ -31,6 +32,7 @@ public class BoxPushing : MonoBehaviour
             {
                 rb.isKinematic = true;
                 this.transform.SetParent(playerObject.transform);
+                Debug.Log("Pressione 'G' para soltar a caixa");
             }
             else
             {

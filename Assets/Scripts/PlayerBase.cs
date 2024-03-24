@@ -36,7 +36,7 @@ public class PlayerBase : MonoBehaviour
     public MoveType moveType = MoveType.Translate;
     [SerializeField] float speed = 5.0f;
     Vector3 inputVector;
-    Rigidbody2D rb2d;
+    public Rigidbody2D rb2d;
 
     // Variável para controlar o tipo de dash
     [Header("Dash")]
@@ -53,7 +53,6 @@ public class PlayerBase : MonoBehaviour
     [Header("Pulo")]
     private bool canJump = true;
     public float jumpForce = 500f;
-    private Rigidbody2D rb;
     private bool isGrounded = true;      // Flag para indicar se o personagem está no chão    
     private bool jumpRequested = false;  // Flag para indicar se o pulo foi solicitado    
     bool doubleJump = true;              // Flag para indicar se o personagem pode realizar um segundo pulo
@@ -69,9 +68,13 @@ public class PlayerBase : MonoBehaviour
     float wallSliderJumpTimer = 0.2f;
     bool canSlide = true;
 
+    // Variável para controlar o puxar caixa
     public bool podePuxarCaixa = false;
 
+    // Variável para controlar as chaves
     public List<int> chaves = new List<int>();
+
+
     void Start()
     {
 
@@ -146,10 +149,10 @@ public class PlayerBase : MonoBehaviour
             }
 
         }
-        if(wallSliderJumpTimer > 0 && !canSlide)
+        if (wallSliderJumpTimer > 0 && !canSlide)
         {
             wallSliderJumpTimer -= Time.deltaTime;
-            if(wallSliderJumpTimer <= 0)
+            if (wallSliderJumpTimer <= 0)
             {
                 canSlide = true;
                 wallSliderJumpTimer = 0.2f;
@@ -163,9 +166,9 @@ public class PlayerBase : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.G))
         {
             podePuxarCaixa = !podePuxarCaixa;
-            if(podePuxarCaixa) canJump = false;
+            if (podePuxarCaixa) canJump = false;
             else canJump = true;
-        }        
+        }
 
     }
 
@@ -184,7 +187,7 @@ public class PlayerBase : MonoBehaviour
             rb2d.AddForce(new Vector2(0, jumpForce));
             isGrounded = false; // Ao pular o personagem não está mais no chão
             jumpRequested = false; // Reseta a solicitação de pulo
-        } 
+        }
         else if (jumpRequested && !canJump)
         {
             jumpRequested = false;
