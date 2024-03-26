@@ -293,13 +293,29 @@ public class PlayerBase : MonoBehaviour
     {
         float time = 0;
         Vector3 originalPosition = transform.position;
-        Vector3 endPosition = transform.position + (direction * distance);
+
+        // Realiza o Raycast para frente na direção do dash
+        RaycastHit2D hit = Physics2D.Raycast(originalPosition, direction, distance, whatIsWall);
+
+        Vector3 endPosition;
+        if (hit.collider != null)
+        {
+            // Se um obstáculo for detectado, ajusta o ponto final para antes do impacto
+            endPosition = originalPosition + (direction * (hit.distance - 0.05f)); // Subtrai um pequeno valor para garantir que não fique "dentro" do obstáculo
+        }
+        else
+        {
+            // Se nenhum obstáculo for detectado, procede normalmente
+            endPosition = originalPosition + (direction * distance);
+        }
+
         while (time < duration)
         {
             transform.position = Vector3.Lerp(originalPosition, endPosition, time / duration);
             time += Time.deltaTime;
             yield return null;
         }
+
         transform.position = endPosition;
     }
     #endregion
@@ -307,6 +323,7 @@ public class PlayerBase : MonoBehaviour
     #region Métodos de Wall Slide
     public void WallSlide()
     {
+        return; // desativação temporária deste método
         isTouchingWall = Physics2D.OverlapCircle(wallCheck.position, wallCheckRadius, whatIsWall);
         if (isTouchingWall && !isGrounded)
         {

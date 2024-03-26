@@ -700,7 +700,7 @@ GameObject:
   - component: {fileID: 123342646}
   - component: {fileID: 123342648}
   - component: {fileID: 123342647}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Parede (32)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -830,7 +830,7 @@ GameObject:
   - component: {fileID: 149046336}
   - component: {fileID: 149046338}
   - component: {fileID: 149046337}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Parede (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1616,7 +1616,7 @@ GameObject:
   - component: {fileID: 211483654}
   - component: {fileID: 211483656}
   - component: {fileID: 211483655}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Parede (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2303,7 +2303,7 @@ GameObject:
   - component: {fileID: 349979522}
   - component: {fileID: 349979524}
   - component: {fileID: 349979523}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Parede (35)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2633,7 +2633,7 @@ GameObject:
   - component: {fileID: 370390922}
   - component: {fileID: 370390924}
   - component: {fileID: 370390923}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Parede (27)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3029,7 +3029,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3540363974284038771, guid: bf2853c9c1520d446ac47f8fdce52d39, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 941609127}
   m_SourcePrefab: {fileID: 100100000, guid: bf2853c9c1520d446ac47f8fdce52d39, type: 3}
 --- !u!4 &419141986 stripped
 Transform:
@@ -3485,7 +3488,7 @@ GameObject:
   - component: {fileID: 459875307}
   - component: {fileID: 459875309}
   - component: {fileID: 459875308}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Parede (30)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3974,7 +3977,7 @@ GameObject:
   - component: {fileID: 525937868}
   - component: {fileID: 525937870}
   - component: {fileID: 525937869}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Parede (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4104,7 +4107,7 @@ GameObject:
   - component: {fileID: 544371479}
   - component: {fileID: 544371481}
   - component: {fileID: 544371480}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Parede (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4364,7 +4367,7 @@ GameObject:
   - component: {fileID: 549099706}
   - component: {fileID: 549099708}
   - component: {fileID: 549099707}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Parede (37)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4494,7 +4497,7 @@ GameObject:
   - component: {fileID: 558127071}
   - component: {fileID: 558127073}
   - component: {fileID: 558127072}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Parede (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5327,7 +5330,7 @@ GameObject:
   - component: {fileID: 630969691}
   - component: {fileID: 630969693}
   - component: {fileID: 630969692}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Parede (22)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6129,7 +6132,7 @@ Transform:
   m_GameObject: {fileID: 777907181}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 83.14, y: -2.43, z: 0}
+  m_LocalPosition: {x: 99.7, y: -0.03, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6276,7 +6279,7 @@ GameObject:
   - component: {fileID: 794637604}
   - component: {fileID: 794637606}
   - component: {fileID: 794637605}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Parede (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6536,7 +6539,7 @@ GameObject:
   - component: {fileID: 814919091}
   - component: {fileID: 814919093}
   - component: {fileID: 814919092}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Parede (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6784,7 +6787,7 @@ GameObject:
   - component: {fileID: 891599505}
   - component: {fileID: 891599507}
   - component: {fileID: 891599506}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Parede (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6998,7 +7001,7 @@ GameObject:
   - component: {fileID: 933793349}
   - component: {fileID: 933793351}
   - component: {fileID: 933793350}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Parede (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7117,6 +7120,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &941609123 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3540363974284038771, guid: bf2853c9c1520d446ac47f8fdce52d39, type: 3}
+  m_PrefabInstance: {fileID: 419141985}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &941609127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 941609123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 377802607b1ea124c82d78398b25d423, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &956927546
 GameObject:
   m_ObjectHideFlags: 0
@@ -7128,7 +7148,7 @@ GameObject:
   - component: {fileID: 956927549}
   - component: {fileID: 956927548}
   - component: {fileID: 956927547}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Parede (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7640,7 +7660,7 @@ GameObject:
   - component: {fileID: 1015863496}
   - component: {fileID: 1015863498}
   - component: {fileID: 1015863497}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Parede (23)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7770,7 +7790,7 @@ GameObject:
   - component: {fileID: 1020712536}
   - component: {fileID: 1020712538}
   - component: {fileID: 1020712537}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Parede (29)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8281,7 +8301,7 @@ GameObject:
   - component: {fileID: 1140918493}
   - component: {fileID: 1140918495}
   - component: {fileID: 1140918494}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Parede (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8411,7 +8431,7 @@ GameObject:
   - component: {fileID: 1144500435}
   - component: {fileID: 1144500437}
   - component: {fileID: 1144500436}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Parede (26)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8971,7 +8991,7 @@ GameObject:
   - component: {fileID: 1170497189}
   - component: {fileID: 1170497191}
   - component: {fileID: 1170497190}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Parede (24)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9231,7 +9251,7 @@ GameObject:
   - component: {fileID: 1183696556}
   - component: {fileID: 1183696558}
   - component: {fileID: 1183696557}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Parede (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10047,7 +10067,7 @@ GameObject:
   - component: {fileID: 1265475263}
   - component: {fileID: 1265475265}
   - component: {fileID: 1265475264}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Parede (33)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10437,7 +10457,7 @@ GameObject:
   - component: {fileID: 1302932934}
   - component: {fileID: 1302932936}
   - component: {fileID: 1302932935}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Parede (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10926,7 +10946,7 @@ GameObject:
   - component: {fileID: 1322889838}
   - component: {fileID: 1322889840}
   - component: {fileID: 1322889839}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Parede (25)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11056,7 +11076,7 @@ GameObject:
   - component: {fileID: 1331484824}
   - component: {fileID: 1331484826}
   - component: {fileID: 1331484825}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Parede (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11270,7 +11290,7 @@ GameObject:
   - component: {fileID: 1378077446}
   - component: {fileID: 1378077448}
   - component: {fileID: 1378077447}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Parede (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11964,9 +11984,6 @@ MonoBehaviour:
   wallCheckRadius: 0.2
   podePuxarCaixa: 0
   chaves: 
-  estanaEscada: 0
-  velocidadeEscada: 5
-  escadaAngulo: 45
 --- !u!1 &1414203804
 GameObject:
   m_ObjectHideFlags: 0
@@ -12051,6 +12068,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1442579909 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3540363974284038771, guid: bf2853c9c1520d446ac47f8fdce52d39, type: 3}
+  m_PrefabInstance: {fileID: 1572057386}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1442579913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1442579909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 377802607b1ea124c82d78398b25d423, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1444698126
 GameObject:
   m_ObjectHideFlags: 0
@@ -12223,7 +12257,7 @@ GameObject:
   - component: {fileID: 1498229432}
   - component: {fileID: 1498229434}
   - component: {fileID: 1498229433}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Parede (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12859,7 +12893,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3540363974284038771, guid: bf2853c9c1520d446ac47f8fdce52d39, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1442579913}
   m_SourcePrefab: {fileID: 100100000, guid: bf2853c9c1520d446ac47f8fdce52d39, type: 3}
 --- !u!4 &1572057387 stripped
 Transform:
@@ -13256,6 +13293,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1620330737 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3540363974284038771, guid: bf2853c9c1520d446ac47f8fdce52d39, type: 3}
+  m_PrefabInstance: {fileID: 1934047423}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1620330741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620330737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 377802607b1ea124c82d78398b25d423, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1627636924
 GameObject:
   m_ObjectHideFlags: 0
@@ -13410,6 +13464,23 @@ Transform:
   - {fileID: 1331484824}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1715844734 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3540363974284038771, guid: bf2853c9c1520d446ac47f8fdce52d39, type: 3}
+  m_PrefabInstance: {fileID: 2043172280}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1715844738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1715844734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 377802607b1ea124c82d78398b25d423, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1718443466
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13493,7 +13564,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3540363974284038771, guid: bf2853c9c1520d446ac47f8fdce52d39, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1939150933}
   m_SourcePrefab: {fileID: 100100000, guid: bf2853c9c1520d446ac47f8fdce52d39, type: 3}
 --- !u!4 &1718443467 stripped
 Transform:
@@ -13511,7 +13585,7 @@ GameObject:
   - component: {fileID: 1740030158}
   - component: {fileID: 1740030160}
   - component: {fileID: 1740030159}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Parede (36)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13981,7 +14055,7 @@ GameObject:
   - component: {fileID: 1797412192}
   - component: {fileID: 1797412194}
   - component: {fileID: 1797412193}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Parede (28)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14100,6 +14174,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1809307683 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3540363974284038771, guid: bf2853c9c1520d446ac47f8fdce52d39, type: 3}
+  m_PrefabInstance: {fileID: 2110813979}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1809307687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1809307683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 377802607b1ea124c82d78398b25d423, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1831403360
 GameObject:
   m_ObjectHideFlags: 0
@@ -14478,7 +14569,7 @@ GameObject:
   - component: {fileID: 1867581921}
   - component: {fileID: 1867581923}
   - component: {fileID: 1867581922}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Parede (34)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14738,7 +14829,7 @@ GameObject:
   - component: {fileID: 1874073108}
   - component: {fileID: 1874073110}
   - component: {fileID: 1874073109}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Parede (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14985,13 +15076,33 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3540363974284038771, guid: bf2853c9c1520d446ac47f8fdce52d39, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1620330741}
   m_SourcePrefab: {fileID: 100100000, guid: bf2853c9c1520d446ac47f8fdce52d39, type: 3}
 --- !u!4 &1934047424 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4003705549139586638, guid: bf2853c9c1520d446ac47f8fdce52d39, type: 3}
   m_PrefabInstance: {fileID: 1934047423}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1939150929 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3540363974284038771, guid: bf2853c9c1520d446ac47f8fdce52d39, type: 3}
+  m_PrefabInstance: {fileID: 1718443466}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1939150933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1939150929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 377802607b1ea124c82d78398b25d423, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1939629729
 GameObject:
   m_ObjectHideFlags: 0
@@ -15003,7 +15114,7 @@ GameObject:
   - component: {fileID: 1939629730}
   - component: {fileID: 1939629732}
   - component: {fileID: 1939629731}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Parede (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15355,7 +15466,7 @@ GameObject:
   - component: {fileID: 1957423610}
   - component: {fileID: 1957423612}
   - component: {fileID: 1957423611}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Parede (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16133,7 +16244,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3540363974284038771, guid: bf2853c9c1520d446ac47f8fdce52d39, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1715844738}
   m_SourcePrefab: {fileID: 100100000, guid: bf2853c9c1520d446ac47f8fdce52d39, type: 3}
 --- !u!4 &2043172281 stripped
 Transform:
@@ -16627,7 +16741,7 @@ GameObject:
   - component: {fileID: 2081438594}
   - component: {fileID: 2081438596}
   - component: {fileID: 2081438595}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Parede (31)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16829,7 +16943,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3540363974284038771, guid: bf2853c9c1520d446ac47f8fdce52d39, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1809307687}
   m_SourcePrefab: {fileID: 100100000, guid: bf2853c9c1520d446ac47f8fdce52d39, type: 3}
 --- !u!4 &2110813980 stripped
 Transform:
@@ -16933,7 +17050,7 @@ GameObject:
   - component: {fileID: 2144940350}
   - component: {fileID: 2144940352}
   - component: {fileID: 2144940351}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Parede (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
