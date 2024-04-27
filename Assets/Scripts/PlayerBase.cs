@@ -28,13 +28,11 @@ public enum DashType
 public class PlayerBase : MonoBehaviour
 {
     // Variável para controlar a vida do personagem
-    const int MAX_HEALTH = 100;
-    private float health;
+    public PlayerData playerData;
 
     // Variável para controlar o tipo de movimento
     [Header("Movimento")]
-    public MoveType moveType = MoveType.Translate;
-    [SerializeField] float speed = 5.0f;
+    public MoveType moveType = MoveType.Translate;    
     Vector3 inputVector;
     public Rigidbody2D rb2d;
 
@@ -77,13 +75,15 @@ public class PlayerBase : MonoBehaviour
 
     void Start()
     {
-
-        health = MAX_HEALTH;                 // inicializa a vida do personagem com o valor máximo
-        rb2d = GetComponent<Rigidbody2D>();  // Inicializa o componente Rigidbody2D
+        // Observar que para acessar uma constante de um ScriptableObject
+        // é necessário acessar a classe e não a instância
+        playerData.health = PlayerData.MAX_HEALTH;
+        // Inicializa o componente Rigidbody2D
+        rb2d = GetComponent<Rigidbody2D>();
     }
 
     void Update()
-    {
+    {        
         // Recebe o input do jogador
         float horizontalInput = Input.GetAxis("Horizontal");
         // Cria um vetor com os valores do input
@@ -170,6 +170,11 @@ public class PlayerBase : MonoBehaviour
             else canJump = true;
         }
 
+        if(Input.GetKeyDown(KeyCode.P))
+        {
+            CreateTempPlayerData();
+        }
+
     }
 
     private void FixedUpdate()
@@ -197,9 +202,11 @@ public class PlayerBase : MonoBehaviour
     // Método para receber dano
     public void TakeDamage(float damage)
     {
-        health -= damage;
-        Debug.Log("Vida: " + health);
-        if (health <= 0)
+        playerData.health -= damage;
+        Debug.Log("Vida: " + playerData.health);
+        // Atualiza a UI
+        UIManager.instance.UpdateHealthText();
+        if (playerData.health <= 0)
         {
             // Die();
             Debug.Log("Morreu");
@@ -234,21 +241,21 @@ public class PlayerBase : MonoBehaviour
     // Método para mover o personagem modificando a posição diretamente
     void MoveByTransform()
     {
-        Vector3 newPosition = transform.position + inputVector * speed * Time.deltaTime;
+        Vector3 newPosition = transform.position + inputVector * playerData.speed * Time.deltaTime;
         transform.position = newPosition;
     }
 
     // Método para mover o personagem usando o método Translate
     void MoveByTransformTranslate()
     {
-        Vector3 movement = inputVector * speed * Time.deltaTime;
+        Vector3 movement = inputVector * playerData.speed * Time.deltaTime;
         transform.Translate(movement);
     }
 
     // Método para mover o personagem usando a força do Rigidbody2D
     void MoveByRigidbody2dForce()
     {
-        Vector3 forceVector = inputVector * speed;
+        Vector3 forceVector = inputVector * playerData.speed;
         rb2d.AddForce(forceVector);
     }
     #endregion
@@ -283,10 +290,10 @@ public class PlayerBase : MonoBehaviour
 
     public IEnumerator Dash2(float speedMultiplier, float duration, Vector3 direction)
     {
-        float originalSpeed = speed;
-        speed *= speedMultiplier;
+        float originalSpeed = playerData.speed;
+        playerData.speed *= speedMultiplier;
         yield return new WaitForSeconds(duration);
-        speed = originalSpeed;
+        playerData.speed = originalSpeed;
     }
 
     public IEnumerator Dash3(float distance, float duration, Vector3 direction)
@@ -345,5 +352,24 @@ public class PlayerBase : MonoBehaviour
     }
 
 
+    #endregion
+
+    #region Exemplo de criação de PlayerData em tempo de execução
+    void CreateTempPlayerData()
+    {
+        StartCoroutine(CreateTemplPlayerDataC());
+    }
+
+    IEnumerator CreateTemplPlayerDataC()
+    {
+        PlayerData originalPlayerData = playerData;
+        playerData = ScriptableObject.CreateInstance<PlayerData>();
+        playerData.health = 400;
+        playerData.attack = 200;
+        playerData.speed = 2;
+        Debug.Log($"Health temporário: {playerData.health}");
+        yield return new WaitForSeconds(5);
+        playerData = originalPlayerData;
+    }
     #endregion
 }
