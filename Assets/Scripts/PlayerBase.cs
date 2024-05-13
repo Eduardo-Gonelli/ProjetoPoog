@@ -80,6 +80,7 @@ public class PlayerBase : MonoBehaviour
         playerData.health = PlayerData.MAX_HEALTH;
         // Inicializa o componente Rigidbody2D
         rb2d = GetComponent<Rigidbody2D>();
+
     }
 
     void Update()

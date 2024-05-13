@@ -10,7 +10,18 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player.transform.position = startPoint.position;
+        // Carrega a posição de acordo com o GameData
+        GameData gameData = GameDataManager.instance.LoadDataFromPlayerPrefs();
+        if (gameData != null)
+        {
+            player.transform.position = gameData.playerPosition;
+            player.GetComponent<PlayerBase>().playerData.health = gameData.playerHealth;
+            cc.ZoomStart(gameData.cameraZoom, 1);
+        }
+        else
+        {
+            player.transform.position = startPoint.position;
+        }
     }
 
     // Update is called once per frame
