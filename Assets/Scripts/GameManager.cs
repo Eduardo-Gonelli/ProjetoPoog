@@ -11,7 +11,9 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         // Carrega a posição de acordo com o GameData
-        GameData gameData = GameDataManager.instance.LoadDataFromPlayerPrefs();
+        //GameData gameData = GameDataManager.instance.LoadDataFromPlayerPrefs();
+        // Carregando do arquivo Json
+        GameData gameData = GameDataManager.instance.LoadDataFromJson();
         if (gameData != null)
         {
             player.transform.position = gameData.playerPosition;

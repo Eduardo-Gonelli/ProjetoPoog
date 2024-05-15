@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GameDataManager : MonoBehaviour
@@ -45,8 +43,7 @@ public class GameDataManager : MonoBehaviour
         {
             // Se a chave não existir, retorna nulo
             return null;
-        }
-        
+        } 
     }
 
     // Salva os dados do jogo em um arquivo JSON
