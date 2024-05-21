@@ -35,6 +35,7 @@ public class PlayerBase : MonoBehaviour
     public MoveType moveType = MoveType.Translate;    
     Vector3 inputVector;
     public Rigidbody2D rb2d;
+    bool facingRight = true;
 
     // Variável para controlar o tipo de dash
     [Header("Dash")]
@@ -56,15 +57,15 @@ public class PlayerBase : MonoBehaviour
     bool doubleJump = true;              // Flag para indicar se o personagem pode realizar um segundo pulo
 
 
-    // Variáveis para controlar o wall slide
-    public float slideVelocity = -2f;     // velocidade do slide
-    public LayerMask whatIsWall;          // camada que representa a parede
-    public Transform wallCheck;           // ponto de verificação da parede
-    public float wallCheckRadius = 0.2f;  // raio do ponto de verificação
-    bool isTouchingWall;                  // flag para indicar se está tocando a parede
-    bool isWallSliding = false;           // flag para indicar se está deslizando na parede
-    float wallSliderJumpTimer = 0.2f;
-    bool canSlide = true;
+    // Variáveis para controle do Wall Slide
+    // baseado no tutorial do canal Blackthornprod: https://www.youtube.com/watch?v=KCzEnKLaaPc
+    // É dividido em algumas partes.
+    // Parte 1 - Declaração de variáveis
+    LayerMask whatIsWall;
+    bool isTouchingWall;
+    public Transform frontCheck;
+    bool wallSliding;
+    public float wallSlideSpeed;
 
     // Variável para controlar o puxar caixa
     public bool podePuxarCaixa = false;
@@ -80,15 +81,16 @@ public class PlayerBase : MonoBehaviour
         playerData.health = PlayerData.MAX_HEALTH;
         // Inicializa o componente Rigidbody2D
         rb2d = GetComponent<Rigidbody2D>();
-
+        // Inicializa a máscara de camadas para o Wall Slide
+        whatIsWall = LayerMask.GetMask("whatIsWall");
     }
 
     void Update()
     {        
         // Recebe o input do jogador
-        float horizontalInput = Input.GetAxis("Horizontal");
+        float horizontalInput = Input.GetAxisRaw("Horizontal");
         // Cria um vetor com os valores do input
-        inputVector = new Vector3(horizontalInput, 0, 0);
+        inputVector = new Vector2(horizontalInput, 0);
         // Chama o método de movimento de acordo com o tipo selecionado
         // No Update chama os tipos não físicos
         switch (moveType)
@@ -129,12 +131,8 @@ public class PlayerBase : MonoBehaviour
         {
             // Verifica se o personagem está no chão
             // Se sim, solicita o pulo
-            if (isGrounded || isWallSliding)
-            {
-                if (isWallSliding)
-                {
-                    canSlide = false;
-                }
+            if (isGrounded)
+            {                
                 jumpRequested = true;
             }
             // Se não, verifica se o personagem pode realizar um segundo pulo
@@ -150,19 +148,6 @@ public class PlayerBase : MonoBehaviour
             }
 
         }
-        if (wallSliderJumpTimer > 0 && !canSlide)
-        {
-            wallSliderJumpTimer -= Time.deltaTime;
-            if (wallSliderJumpTimer <= 0)
-            {
-                canSlide = true;
-                wallSliderJumpTimer = 0.2f;
-            }
-        }
-        else if (canSlide)
-        {
-            WallSlide();
-        }
 
         if (Input.GetKeyDown(KeyCode.G))
         {
@@ -176,6 +161,47 @@ public class PlayerBase : MonoBehaviour
             CreateTempPlayerData();
         }
 
+        // Wall Slide - Parte 2
+        // Cria um círculo na frente do personagem para verificar se ele está tocando a parede
+        // O círculo tem um raio de 0.2f e está na posição do objeto frontCheck
+        // Apenas a Layer whatIsWall é considerada
+        isTouchingWall = Physics2D.OverlapCircle(frontCheck.position, 0.2f, whatIsWall);
+
+        // Se o personagem está tocando a parede e não está no chão
+        // e não está pressionando o movimento para os lados
+        if (isTouchingWall && !isGrounded && horizontalInput != 0)
+        {
+            wallSliding = true;
+        }
+        else
+        {
+            wallSliding = false;
+        }
+
+        // Controle do flip
+        if(horizontalInput > 0 && !facingRight)
+        {
+            Flip();
+        }
+        else if(horizontalInput < 0 && facingRight)
+        {
+            Flip();
+        }
+
+        // Se o personagem está deslizando na parede
+        if (wallSliding)
+        {
+            // Aplica a velocidade de deslizamento na parede utilizando o cálculo
+            // Mathf.Clamp(rb2d.velocity.y, wallSlideSpeed, float.MaxValue), que limita
+            // a velocidade do personagem entre wallSlideSpeed e float.MaxValue
+            rb2d.velocity = new Vector2(rb2d.velocity.x, Mathf.Clamp(rb2d.velocity.y, -wallSlideSpeed, float.MaxValue));
+        }
+    }
+
+    void Flip()
+    {
+        transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+        facingRight = !facingRight;
     }
 
     private void FixedUpdate()
@@ -189,8 +215,8 @@ public class PlayerBase : MonoBehaviour
         // Aplica a força de pulo se um pulo foi solicitado e o personagem está no chão
         if (jumpRequested && canJump)
         {
-            rb2d.velocity = Vector2.zero;
-            rb2d.AddForce(new Vector2(0, jumpForce));
+            rb2d.velocity = new Vector2(rb2d.velocity.x, 0);
+            rb2d.velocity = new Vector2(rb2d.velocity.x, jumpForce);
             isGrounded = false; // Ao pular o personagem não está mais no chão
             jumpRequested = false; // Reseta a solicitação de pulo
         }
@@ -256,8 +282,8 @@ public class PlayerBase : MonoBehaviour
     // Método para mover o personagem usando a força do Rigidbody2D
     void MoveByRigidbody2dForce()
     {
-        Vector3 forceVector = inputVector * playerData.speed;
-        rb2d.AddForce(forceVector);
+        Vector2 forceVector = new Vector2(inputVector.x * playerData.speed, rb2d.velocity.y);
+        rb2d.velocity = new Vector2(forceVector.x, rb2d.velocity.y);
     }
     #endregion
 
@@ -329,28 +355,8 @@ public class PlayerBase : MonoBehaviour
     #endregion
 
     #region Métodos de Wall Slide
-    public void WallSlide()
-    {
-        return; // desativação temporária deste método
-        isTouchingWall = Physics2D.OverlapCircle(wallCheck.position, wallCheckRadius, whatIsWall);
-        if (isTouchingWall && !isGrounded)
-        {
-            isWallSliding = true;
-            rb2d.velocity = new Vector2(rb2d.velocity.x, slideVelocity);
-        }
-        else
-        {
-            isWallSliding = false;
-        }
-    }
 
-    private void OnDrawGizmosSelected()
-    {
-        if (wallCheck != null)
-        {
-            Gizmos.DrawWireSphere(wallCheck.position, wallCheckRadius);
-        }
-    }
+
 
 
     #endregion

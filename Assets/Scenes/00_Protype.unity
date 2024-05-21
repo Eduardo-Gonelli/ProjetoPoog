@@ -279,7 +279,7 @@ GameObject:
   - component: {fileID: 10628462}
   - component: {fileID: 10628464}
   - component: {fileID: 10628463}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Chao (1)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -440,7 +440,7 @@ GameObject:
   - component: {fileID: 52274096}
   - component: {fileID: 52274098}
   - component: {fileID: 52274097}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Chao (22)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -570,7 +570,7 @@ GameObject:
   - component: {fileID: 81329346}
   - component: {fileID: 81329345}
   - component: {fileID: 81329347}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Chao (0)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -984,6 +984,37 @@ Transform:
   - {fileID: 1383970418}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &167586226
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 167586227}
+  m_Layer: 0
+  m_Name: GroundCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &167586227
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 167586226}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 945797147}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &181999696
 GameObject:
   m_ObjectHideFlags: 0
@@ -995,7 +1026,7 @@ GameObject:
   - component: {fileID: 181999697}
   - component: {fileID: 181999699}
   - component: {fileID: 181999698}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Chao (38)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -1125,7 +1156,7 @@ GameObject:
   - component: {fileID: 193675391}
   - component: {fileID: 193675393}
   - component: {fileID: 193675392}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Chao (34)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -1341,7 +1372,7 @@ GameObject:
   - component: {fileID: 200633386}
   - component: {fileID: 200633388}
   - component: {fileID: 200633387}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Chao (11)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -1746,7 +1777,7 @@ GameObject:
   - component: {fileID: 215180691}
   - component: {fileID: 215180693}
   - component: {fileID: 215180692}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Chao (13)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -1881,6 +1912,10 @@ PrefabInstance:
       propertyPath: m_Offset.x
       value: 0.3629251
       objectReference: {fileID: 0}
+    - target: {fileID: 3956073331847677347, guid: b20f169b5e4648b4bb90c5b7dab62075, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6275890060339934996, guid: b20f169b5e4648b4bb90c5b7dab62075, type: 3}
       propertyPath: m_Name
       value: StairLR
@@ -1941,7 +1976,7 @@ GameObject:
   - component: {fileID: 224260221}
   - component: {fileID: 224260223}
   - component: {fileID: 224260222}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Chao (37)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -2181,7 +2216,7 @@ GameObject:
   - component: {fileID: 344323274}
   - component: {fileID: 344323276}
   - component: {fileID: 344323275}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Chao (31)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -2446,6 +2481,10 @@ PrefabInstance:
       propertyPath: m_Offset.x
       value: -0.31217092
       objectReference: {fileID: 0}
+    - target: {fileID: 3956073331847677347, guid: cce043e4d07f40d499ca5e424aca16cb, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6275890060339934996, guid: cce043e4d07f40d499ca5e424aca16cb, type: 3}
       propertyPath: m_Name
       value: StairRL
@@ -2519,7 +2558,7 @@ GameObject:
   - component: {fileID: 362109217}
   - component: {fileID: 362109219}
   - component: {fileID: 362109218}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Chao (33)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -2843,7 +2882,7 @@ GameObject:
   - component: {fileID: 414135749}
   - component: {fileID: 414135751}
   - component: {fileID: 414135750}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Chao (21)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -3779,7 +3818,7 @@ GameObject:
   - component: {fileID: 506453874}
   - component: {fileID: 506453876}
   - component: {fileID: 506453875}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Chao (7)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -3898,6 +3937,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &507397119
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 507397120}
+  m_Layer: 0
+  m_Name: FrontCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &507397120
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 507397119}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.682, y: 0.007, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1411193732}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &521982575
 GameObject:
   m_ObjectHideFlags: 0
@@ -4253,7 +4323,7 @@ GameObject:
   - component: {fileID: 545369231}
   - component: {fileID: 545369233}
   - component: {fileID: 545369232}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Chao (23)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -4956,7 +5026,7 @@ GameObject:
   - component: {fileID: 618093150}
   - component: {fileID: 618093152}
   - component: {fileID: 618093151}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Chao (9)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -5216,7 +5286,7 @@ GameObject:
   - component: {fileID: 628613495}
   - component: {fileID: 628613497}
   - component: {fileID: 628613496}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Chao (18)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -5610,7 +5680,7 @@ GameObject:
   - component: {fileID: 671857155}
   - component: {fileID: 671857157}
   - component: {fileID: 671857156}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Chao (36)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -5729,6 +5799,90 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &685502383
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 685502384}
+  - component: {fileID: 685502385}
+  m_Layer: 0
+  m_Name: Circle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &685502384
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 685502383}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.348, y: 0.582, z: 0}
+  m_LocalScale: {x: 0.16031, y: 0.16031, z: 0.16031}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 945797147}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &685502385
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 685502383}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 10
+  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &707395868
 GameObject:
   m_ObjectHideFlags: 0
@@ -5779,7 +5933,7 @@ GameObject:
   - component: {fileID: 722033342}
   - component: {fileID: 722033344}
   - component: {fileID: 722033343}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Chao (3)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -6138,7 +6292,7 @@ GameObject:
   - component: {fileID: 775988672}
   - component: {fileID: 775988674}
   - component: {fileID: 775988673}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Chao (20)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -6299,7 +6453,7 @@ GameObject:
   - component: {fileID: 784525108}
   - component: {fileID: 784525110}
   - component: {fileID: 784525109}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Chao (5)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -7331,6 +7485,207 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 377802607b1ea124c82d78398b25d423, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &945797142
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 945797147}
+  - component: {fileID: 945797146}
+  - component: {fileID: 945797145}
+  - component: {fileID: 945797144}
+  - component: {fileID: 945797143}
+  - component: {fileID: 945797148}
+  m_Layer: 0
+  m_Name: HeroiRigidBody
+  m_TagString: Player
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!50 &945797143
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 945797142}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 5
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!114 &945797144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 945797142}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 785cd31f141b26a45803dec14d6ced39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerData: {fileID: 11400000, guid: 733dd0e4bf85f164cbe0266374c66876, type: 2}
+  moveType: 2
+  rb2d: {fileID: 0}
+  dashType: 2
+  dashDuration: 0.1
+  dashForce: 5
+  dashCooldown: 1
+  jumpForce: 30
+  frontCheck: {fileID: 1161323804}
+  wallSlideSpeed: 2
+  podePuxarCaixa: 0
+  chaves: 
+--- !u!70 &945797145
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 945797142}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 8d1d8b804e13d5447ac0e08824828b25, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 1, y: 2}
+  m_Direction: 0
+--- !u!212 &945797146
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 945797142}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 1
+  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 2}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &945797147
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 945797142}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -24.571, y: -3.037, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1161323804}
+  - {fileID: 167586227}
+  - {fileID: 685502384}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &945797148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 945797142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3616b419945b474469172870d0b31239, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  speed: 7
+  rb2d: {fileID: 945797143}
+  jumpForce: 20
+  groundCheck: {fileID: 167586227}
+  frontCheck: {fileID: 1161323804}
+  wallSlideSpeed: 2
+  xWallForce: 15
+  yWallForce: 15
+  wallJumpTime: 0.15
+  podePuxarCaixa: 0
+  chaves: 
 --- !u!1 &956927546
 GameObject:
   m_ObjectHideFlags: 0
@@ -7472,7 +7827,7 @@ GameObject:
   - component: {fileID: 962637326}
   - component: {fileID: 962637328}
   - component: {fileID: 962637327}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Chao (2)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -7640,7 +7995,7 @@ GameObject:
   - component: {fileID: 998897773}
   - component: {fileID: 998897775}
   - component: {fileID: 998897774}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Chao (35)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -8365,7 +8720,7 @@ GameObject:
   - component: {fileID: 1139592403}
   - component: {fileID: 1139592405}
   - component: {fileID: 1139592404}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Chao (28)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -8839,7 +9194,7 @@ GameObject:
   - component: {fileID: 1150804234}
   - component: {fileID: 1150804236}
   - component: {fileID: 1150804235}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Chao (17)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -8958,6 +9313,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1161323803
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1161323804}
+  m_Layer: 0
+  m_Name: FrontCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1161323804
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1161323803}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.682, y: 0.007, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 945797147}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1162654727
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9055,7 +9441,7 @@ GameObject:
   - component: {fileID: 1163710104}
   - component: {fileID: 1163710106}
   - component: {fileID: 1163710105}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Chao (30)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -9315,7 +9701,7 @@ GameObject:
   - component: {fileID: 1180781039}
   - component: {fileID: 1180781041}
   - component: {fileID: 1180781040}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Chao (10)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -9874,7 +10260,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b884c6f17890cf4783a8d4a74597805, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1411193729}
+  player: {fileID: 945797142}
   offsetX: 0
   offsetY: 1
   offsetSmoothingX: 5
@@ -10131,7 +10517,7 @@ GameObject:
   - component: {fileID: 1262338301}
   - component: {fileID: 1262338303}
   - component: {fileID: 1262338302}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Chao (4)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -10391,7 +10777,7 @@ GameObject:
   - component: {fileID: 1268331378}
   - component: {fileID: 1268331380}
   - component: {fileID: 1268331379}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Chao (19)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -10781,7 +11167,7 @@ GameObject:
   - component: {fileID: 1309564360}
   - component: {fileID: 1309564362}
   - component: {fileID: 1309564361}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Chao (39)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -12020,7 +12406,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1411193731
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12085,7 +12471,9 @@ Transform:
   m_LocalPosition: {x: -24.571, y: -3.037, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 507397120}
+  - {fileID: 1441717924}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &1411193733
@@ -12102,7 +12490,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0
+  m_AngularDrag: 0.05
   m_GravityScale: 2
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -12163,19 +12551,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerData: {fileID: 11400000, guid: 733dd0e4bf85f164cbe0266374c66876, type: 2}
-  moveType: 1
+  moveType: 2
   rb2d: {fileID: 0}
   dashType: 2
   dashDuration: 0.1
   dashForce: 5
   dashCooldown: 1
-  jumpForce: 500
-  slideVelocity: -2
-  whatIsWall:
-    serializedVersion: 2
-    m_Bits: 0
-  wallCheck: {fileID: 1411193732}
-  wallCheckRadius: 0.2
+  jumpForce: 10
+  frontCheck: {fileID: 507397120}
+  wallSlideSpeed: 2
   podePuxarCaixa: 0
   chaves: 
 --- !u!1 &1414203804
@@ -12433,6 +12817,90 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &1441717923
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1441717924}
+  - component: {fileID: 1441717925}
+  m_Layer: 0
+  m_Name: Circle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1441717924
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1441717923}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.348, y: 0.582, z: 0}
+  m_LocalScale: {x: 0.16031, y: 0.16031, z: 0.16031}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1411193732}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &1441717925
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1441717923}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 10
+  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &1442579909 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3540363974284038771, guid: bf2853c9c1520d446ac47f8fdce52d39, type: 3}
@@ -12492,7 +12960,7 @@ GameObject:
   - component: {fileID: 1491685980}
   - component: {fileID: 1491685982}
   - component: {fileID: 1491685981}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Chao (6)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -13178,7 +13646,7 @@ GameObject:
   - component: {fileID: 1535052326}
   - component: {fileID: 1535052328}
   - component: {fileID: 1535052327}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Chao (26)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -13381,7 +13849,7 @@ GameObject:
   - component: {fileID: 1608441829}
   - component: {fileID: 1608441831}
   - component: {fileID: 1608441830}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Chao (25)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -13511,7 +13979,7 @@ GameObject:
   - component: {fileID: 1614494267}
   - component: {fileID: 1614494269}
   - component: {fileID: 1614494268}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Chao (32)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -13641,7 +14109,7 @@ GameObject:
   - component: {fileID: 1618551104}
   - component: {fileID: 1618551106}
   - component: {fileID: 1618551105}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Chao (8)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -14378,7 +14846,7 @@ GameObject:
   - component: {fileID: 1774922769}
   - component: {fileID: 1774922770}
   - component: {fileID: 1774922771}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Porta
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14669,7 +15137,7 @@ GameObject:
   - component: {fileID: 1831403361}
   - component: {fileID: 1831403363}
   - component: {fileID: 1831403362}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Chao (12)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -14799,7 +15267,7 @@ GameObject:
   - component: {fileID: 1842445658}
   - component: {fileID: 1842445660}
   - component: {fileID: 1842445659}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Chao (15)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -14970,6 +15438,10 @@ PrefabInstance:
     - target: {fileID: 903166127531622821, guid: cce043e4d07f40d499ca5e424aca16cb, type: 3}
       propertyPath: m_Offset.x
       value: -0.31821018
+      objectReference: {fileID: 0}
+    - target: {fileID: 3956073331847677347, guid: cce043e4d07f40d499ca5e424aca16cb, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6275890060339934996, guid: cce043e4d07f40d499ca5e424aca16cb, type: 3}
       propertyPath: m_Name
@@ -15220,7 +15692,7 @@ GameObject:
   - component: {fileID: 1867635066}
   - component: {fileID: 1867635068}
   - component: {fileID: 1867635067}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Chao (16)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -15986,7 +16458,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1951924733}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: f4cf1d336f2c31e49a0bedf2d5af789b, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -16641,7 +17113,7 @@ GameObject:
   - component: {fileID: 2008505797}
   - component: {fileID: 2008505799}
   - component: {fileID: 2008505798}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Chao (14)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -16771,7 +17243,7 @@ GameObject:
   - component: {fileID: 2029280219}
   - component: {fileID: 2029280221}
   - component: {fileID: 2029280220}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Chao (27)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -16999,7 +17471,7 @@ GameObject:
   - component: {fileID: 2050999110}
   - component: {fileID: 2050999112}
   - component: {fileID: 2050999111}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Chao (29)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -17129,7 +17601,7 @@ GameObject:
   - component: {fileID: 2054226578}
   - component: {fileID: 2054226580}
   - component: {fileID: 2054226579}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Chao (24)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -17967,6 +18439,7 @@ SceneRoots:
   - {fileID: 1225404537}
   - {fileID: 1627636926}
   - {fileID: 1411193732}
+  - {fileID: 945797147}
   - {fileID: 1385798633}
   - {fileID: 1214596726}
   - {fileID: 777907182}

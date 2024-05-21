@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a05b71859c81fb4ab76ffea3644ec12, type: 3}
   m_Name: PlayerData0
   m_EditorClassIdentifier: 
-  health: 80
+  health: 100
   attack: 10
-  speed: 5
+  speed: 10
   currentPosition: {x: 0, y: 0}

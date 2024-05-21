@@ -16,6 +16,7 @@ public class CameraController : MonoBehaviour
     public float offsetSmoothingY;  // Suavização no eixo Y
     private Vector3 playerPosition; // Posição do jogador
     public bool isZooming = false;  // Flag para indicar se a câmera está em processo de zoom
+    private Vector3 newPosition;
 
     void Update()
     {
@@ -34,8 +35,13 @@ public class CameraController : MonoBehaviour
         }
 
         // Suavização separada para os eixos X e Y
-        Vector3 newPosition = Vector3.Lerp(transform.position, playerPosition, offsetSmoothingX * Time.deltaTime);
+        newPosition = Vector3.Lerp(transform.position, playerPosition, offsetSmoothingX * Time.deltaTime);
         newPosition.y = Mathf.Lerp(transform.position.y, playerPosition.y, offsetSmoothingY * Time.deltaTime);
+        
+    }
+
+    private void LateUpdate()
+    {
         transform.position = newPosition;
     }
 
